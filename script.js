@@ -64,7 +64,7 @@ function clear() {
 	onOperate = false;
 	onDisplay = false;
 
-	history.textContent = "";
+	history.textContent = "0";
 	display.textContent = "0";
 }
 
@@ -117,13 +117,15 @@ function operatorListener(e) {
 }
 
 function resultListener(e) {
-	onOperate = false;
-	ans = operate(parseFloat(left), parseFloat(buffer), currOperator);
-	clearBuffer();
+	if (!onDisplay) {
+		onOperate = false;
+		ans = operate(parseFloat(left), parseFloat(buffer), currOperator);
+		clearBuffer();
 
-	display.textContent = ans;
+		display.textContent = ans;
 
-	onDisplay = true;
+		onDisplay = true;
+	}
 }
 
 function makeFloat() {
@@ -155,6 +157,9 @@ function remove() {
 		str = str.split("");
 		str.pop();
 		str = str.join("");
+
+		if (str === "" || str === "0") str = "0";
+
 		history.textContent = str;
 	}
 }

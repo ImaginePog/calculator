@@ -1,4 +1,102 @@
-* body {
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@700&display=swap');
+
+:root {
+    height: 100vh;
+    color: #FFBA08;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
     padding: 0;
     margin: 0;
+    font-size: 2rem;
+}
+
+.display-history {
+    font-size: 1.5rem;
+}
+
+
+
+body {
+    height: 100%;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #0e1018;
+}
+
+.calculator-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+}
+
+.calculator {
+    border: rgb(34, 35, 43) solid 20px;
+    border-radius: 24px;
+    background-color: #6A040F;
+}
+
+.calculator > div {
+    border: rgb(21, 22, 26) solid 5px;
+}
+
+.heading {
+    font-size: 4rem;
+}
+
+
+.display-container {
+    background-color: rgb(36, 51, 36);
+    padding: 12px;
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+/* BUTTONS */
+
+button {
+    color: #FAA307;
+    background-color: #6A040F;
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+
+    border: #5f040d solid 2px;
+    box-shadow: 0px 0px 5px #5f040d;
+}
+
+button:hover {
+    opacity: 60%;
+    background-color: #42040a;
+}
+
+button:active {
+    opacity: 30%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 12px 12px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 12px;
+}
+
+.control-row button {
+    flex: 1;
 }
